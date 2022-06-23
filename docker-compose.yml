@@ -1,0 +1,19 @@
+version: '3.9'
+services: 
+  db: 
+    image: mongo:latest 
+    container_name: MongoDB 
+    restart: always 
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: mongodbuser
+      MONGO_INITDB_ROOT_PASSWORD: password 
+      MONGO_INITDB_DATABASE: sa_properties 
+      MONGODB_DATA_DIR: /data/db 
+      MONGODB_LOG_DIR: /dev/null
+    volumes: 
+      - ./data/bin:/.data/db 
+
+    ports: 
+      - 27017:27017 
+
+
