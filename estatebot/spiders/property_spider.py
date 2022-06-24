@@ -11,6 +11,7 @@ from estatebot.utils.constants import property_co_za_endpoints
 
 class PropertySpider(Spider): 
     name = 'property' 
+    download_delay = 5.0
     start_urls = [ 
          #'https://www.privateproperty.co.za/commercial-sales/western-cape/cape-town/atlantic-seaboard/1683',
          'https://www.privateproperty.co.za/bank-sales/western-cape/4?page=2',

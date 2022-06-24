@@ -7,6 +7,7 @@ from estatebot.items import Property24Item
 
 class Property24Spider(Spider): 
     name = 'property24' 
+    download_delay = 5.0
     start_urls = [
         'https://www.property24.com/for-sale/cape-town/western-cape/432/p22', 
     ] 
